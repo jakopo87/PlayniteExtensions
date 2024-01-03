@@ -39,8 +39,8 @@ namespace ItchioLibrary
             }
 
             Dispose();
-            ProcessStarter.StartUrl("itch://library/owned");
-            StartInstallWatcher();
+			ProcessStarter.StartUrl($"itch://games/{Game.GameId}");
+			StartInstallWatcher();
         }
 
         public async void StartInstallWatcher()
@@ -99,7 +99,7 @@ namespace ItchioLibrary
             }
 
             Dispose();
-            ProcessStarter.StartUrl("itch://library/installed");
+            ProcessStarter.StartUrl($"itch://games/{Game.GameId}");
             StartUninstallWatcher();
         }
 
